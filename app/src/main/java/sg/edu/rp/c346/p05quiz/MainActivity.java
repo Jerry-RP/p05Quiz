@@ -55,7 +55,7 @@ CheckBox cbRT;
             public void onClick(View view) {
                 boolean cb=false;
                 boolean vnum=false;
-                if((cbOW.isChecked())&&(cbRT.isChecked())){
+                if(((cbOW.isChecked())&&(cbRT.isChecked()))||(!cbOW.isChecked())&&(!cbRT.isChecked())){
                     cb=true;
                 }else if(cbOW.isChecked()){
                     if(Integer.parseInt(tvNum.getText().toString())>0){
@@ -89,20 +89,20 @@ CheckBox cbRT;
                 }
                 if((cb==true)&&(vnum==true)){
 
-                    Toast.makeText(MainActivity.this, "Invalid Input Both Checkboxes Selected", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Invalid Input", Toast.LENGTH_SHORT).show();
                     new Handler().postDelayed(new Runnable() {
                         @Override public void run() {
                             int delay=0;
                         }
                     }, 3000);
 
-                    Toast.makeText(MainActivity.this, "Invalid input pax < 1", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Invalid input", Toast.LENGTH_SHORT).show();
                 }else if(cb==true){
-                    Toast.makeText(MainActivity.this, "Invalid Input Both Checkboxes Selected", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Invalid Input", Toast.LENGTH_SHORT).show();
 
 
                 }else if(vnum==true){
-                    Toast.makeText(MainActivity.this, "Invalid input pax < 1", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Invalid input", Toast.LENGTH_SHORT).show();
                 }
 
 

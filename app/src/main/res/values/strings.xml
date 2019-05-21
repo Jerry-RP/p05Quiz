@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">p05-Quiz</string>
+    <string name="tType">Ticket Type</string>
+    <string name="tType1">One Way</string>
+    <string name="tType2">Round Trip</string>
+
 </resources>
